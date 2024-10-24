@@ -166,13 +166,19 @@ int buscar(Lista *lista, int valor){
   return 0;
 }
 
+// Função que concatena duas lista em uma nova lista
 Lista *concat(Lista *lista1, Lista *lista2){
+  Lista *lista = nova_lista();
   Lista *aux = lista1;
-  while(aux->prox!=NULL){
-    aux = aux->prox;
+  while(lista1 != NULL){
+    lista = inserir_final(lista, lista1->num);
+    lista1 = lista1->prox;
   }
-  aux->prox = lista2;
-  return lista1;
+  while(lista2 != NULL){
+    lista = inserir_final(lista, lista2->num);
+    lista2 = lista2->prox;
+  }
+  return lista;
 }
 
 
@@ -442,6 +448,8 @@ void b(){
   imprimir(lista);
   printf("\n");
   liberar(&lista);
+  liberar(&lista1);
+  liberar(&lista2);
 }
 
 void c(){
