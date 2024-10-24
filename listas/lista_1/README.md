@@ -14,8 +14,8 @@ Reposítorio para a solução da lista 1 da matéria de estrutura de dados do cu
    - V. Numa pilha apenas a inserção pode ser feita em qualquer posição.
 Quais são as afirmativas verdadeiras?
 
-  - [] a) Somente I e III
-  - [] b) Somente II, III e IV
+  - [ ] a) Somente I e III
+  - [ ] b) Somente II, III e IV
   - [x] c) Somente I, II e IV
-  - [] d) Somente II, IV e V
-  - [] e) Todas as afirmativas
+  - [ ] d) Somente II, IV e V
+  - [ ] e) Todas as afirmativas
