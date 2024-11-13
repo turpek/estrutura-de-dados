@@ -78,6 +78,13 @@ int size(){
 
 
 int eh_operacao(char *token){
+  // Para um token ser operação, token[1] deve ser um espaço em branco, ou um '\n' ou ainda '\0',
+  // pois existe o caso de token ser um número negativo, com isso token[0] será o operador '-' 
+  // e  token[1] será um número.
+  if((token[0] == '-' || token[0] == '+') && (token[1] >= '0' && token[1] <= '9')){
+    return 0;
+  }
+
   char ch = token[0];
   if(ch == '+' || ch == '-' || ch == '*' || ch == '/'){
     return 1;
