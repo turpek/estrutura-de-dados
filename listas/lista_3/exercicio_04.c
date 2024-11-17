@@ -111,7 +111,7 @@ int remover(Fila *fila){
 
 void liberar(Fila *fila){
   NoFila *p = fila->front, *aux;
-  while(p->prox != NULL){
+  while(p != NULL){
     aux = p;
     p = p->prox;
     free(aux);
